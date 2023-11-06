@@ -1,0 +1,2 @@
+-- Active: 1699110462151@@127.0.0.1@3306@ecommerce
+SELECT SUM(a.`quantity` * a.`unit_price`) AS `revenue`, b.`name` AS `category` FROM `order_otems` a RIGHT JOIN `categories` b ON a.`cat_id` = b.`id` GROUP BY a.`cat_id` ORDER BY `revenue` DESC

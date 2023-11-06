@@ -1,0 +1,2 @@
+-- Active: 1699110462151@@127.0.0.1@3306@ecommerce
+SELECT a.`lastName` AS `Customer Name`, SUM(b.`total_amount`) AS `TotalPurchase` FROM `users` a JOIN `orders` b ON a.`id` = b.`customer_id` GROUP BY b.`customer_id` ORDER BY `TotalPurchase` DESC LIMIT 5
